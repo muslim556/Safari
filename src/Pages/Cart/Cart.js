@@ -44,7 +44,7 @@ export function Cart() {
         item.id === id
           ? {
               ...item,
-              count: item.count > 1 ? item.count-- : 1,
+              count: item.count--,
             }
           : item
       )
