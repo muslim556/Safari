@@ -1,0 +1,327 @@
+@media (max-width: 1100px) {
+  #SecContainer {
+    gap: 30px;
+  }
+
+  #paginateCard {
+    width: 250px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .profilNav {
+    display: none;
+  }
+
+  .navCard {
+    display: flex;
+  }
+
+  .menuLink {
+    width: 200px;
+  }
+
+  .mediaNav {
+    padding: 10%;
+  }
+
+  .mediaNav > a {
+    margin-left: 20px;
+  }
+
+  .navLink {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+  }
+
+  .profil {
+    justify-content: flex-start !important;
+  }
+
+  #footer {
+    gap: 30px;
+  }
+
+  #Cart {
+    padding: 30px !important;
+  }
+
+  table {
+    width: 950px !important;
+    font-size: 14px;
+  }
+
+  .profilNav {
+    min-width: unset !important;
+    max-width: unset !important;
+    padding: 20px !important ;
+  }
+
+  .profilNav > :nth-child(1) {
+    display: none;
+  }
+  .profilNavLink > a > p {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  #choose_price {
+    font-size: 12px;
+  }
+
+  #choose_price > input {
+    width: 12px;
+    height: 12px;
+  }
+
+  #write_price_form {
+    flex-direction: column !important;
+  }
+
+  #write_price_form > :last-child {
+    margin: 0 !important;
+    margin-top: 10px !important;
+  }
+
+  #checkout {
+    padding: 40px !important;
+  }
+
+  table {
+    width: 880px !important;
+  }
+
+  #favorite {
+    display: none;
+  }
+
+  #order_card {
+    width: 750px !important;
+  }
+
+  #order_detail_text > p {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  table {
+    width: 750px !important;
+  }
+
+  #productCard {
+    width: 300px;
+    gap: 10px;
+  }
+
+  #cart_detail {
+    width: 180px !important;
+  }
+
+  #cart_detail > p {
+    font-size: 14px !important;
+  }
+
+  #checkout {
+    padding: 40px !important;
+  }
+
+  #order_card {
+    width: 680px !important;
+  }
+
+  #payment_details {
+    margin: 0 0 0 20px !important;
+  }
+
+  #order_delivery_method {
+    margin: 0 0 0 20px !important;
+  }
+
+  #footer {
+    gap: 50px !important;
+    flex-wrap: wrap;
+  }
+
+  #added_btns {
+    display: flex;
+  }
+
+  .btn-group {
+    display: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  #SecContainer {
+    gap: 20px;
+  }
+
+  #paginateCard {
+    width: 200px;
+    height: 340px;
+  }
+
+  #SeCard > p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 30px;
+  }
+
+  #Btn_Card {
+    margin-right: 100px;
+  }
+
+  #SeCard > div > h2 {
+    font-size: 30px;
+  }
+
+  #bannerBtn {
+    font-size: 20px;
+    gap: 20px;
+    margin: 30px auto 10px;
+    transition: all 0.5s ease;
+  }
+
+  #paginate-header > label > select {
+    width: 80px;
+  }
+
+  table {
+    width: 650px !important;
+  }
+
+  td {
+    font-size: 12px !important;
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  #productCard {
+    padding: 10px !important;
+  }
+
+  #cart_detail {
+    width: 80px;
+  }
+
+  #remove {
+    display: none;
+  }
+
+  #btn-gr {
+    gap: 0 !important;
+  }
+
+  #order_card {
+    width: 600px !important;
+    display: flex;
+  }
+
+  #footer {
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    width: 100% !important;
+  }
+
+  #order_card {
+    width: 500px !important;
+    display: flex;
+  }
+
+  #order_detail_text > p {
+    font-size: 12px !important;
+  }
+
+  #payment_details > p {
+    font-size: 12px !important;
+  }
+
+  #order_delivery_method > p {
+    font-size: 12px !important;
+  }
+
+  .delivered_card {
+    font-size: 10px !important;
+  }
+  #footer {
+    gap: 50px !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 500px) {
+  #SecContainer {
+    gap: 10px;
+  }
+
+  #paginateCard {
+    width: 150px;
+    height: 260px;
+  }
+
+  #SeCard > p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  nav {
+    padding: 1% 3%;
+  }
+
+  .searchLabel {
+    width: 150px;
+  }
+
+  .searchLabel > input {
+    width: 120px;
+  }
+
+  #topBtn {
+    position: absolute;
+    right: -10% !important;
+  }
+
+  #f-card {
+    min-width: 380px !important;
+  }
+
+  #f-c-texts {
+    gap: 10px !important;
+  }
+
+  #f-c-t-img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  #f-c-text > p {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  #SeCard > p {
+    display: none;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+  }
+}

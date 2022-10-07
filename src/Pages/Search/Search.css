@@ -1,0 +1,34 @@
+#search_container {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 80px;
+}
+
+#search_not_found {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#search_continue {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #ed165f;
+  background: none;
+  font-weight: 600;
+}
+
+#search_continue:hover {
+  background: #ed165f;
+  color: #fff;
+}
+
+#search_notfound {
+  font-size: 25px;
+  font-weight: 600;
+}

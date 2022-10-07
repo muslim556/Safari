@@ -1,0 +1,72 @@
+@font-face {
+  font-family: Mulish;
+  src: url(../Assets//Fonts/Mulish-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mulish;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background: #ccc;
+}
+
+#container {
+  width: 100%;
+  height: calc(100vh - 280px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+#header {
+  width: 100%;
+  height: 1166px;
+  background: #ed165f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sec1 {
+  width: 100%;
+  height: 900px;
+}
+
+
+#added_btns{
+  display: none;
+}

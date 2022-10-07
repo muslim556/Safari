@@ -1,0 +1,181 @@
+@font-face {
+  font-family: Mulish;
+  src: url(../../Assets/Fonts/Mulish-Regular.ttf);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 9%;
+  background: #f5f5f5;
+  z-index: 5;
+}
+
+.navLink {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.menuLink > a,
+.navLink > a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.navItem > .active,
+.menuLink > .active,
+.navLink > .active {
+  color: #ed115b !important;
+  border-bottom: 2px solid #ed165f;
+}
+
+.menuBtn {
+  display: none !important;
+}
+
+.navItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.navBtn {
+  color: #000;
+}
+
+.menuLink {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  gap: 15px;
+}
+
+.remember {
+  position: relative;
+}
+
+.dataLength {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px !important;
+  height: 15px;
+  z-index: 111;
+  color: #fff;
+  background: #ed115b;
+  border-radius: 50%;
+  top: -5px;
+  right: -5px;
+  font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .menuLink {
+    width: 200px;
+  }
+  .mediaNav {
+    padding: 10%;
+  }
+
+  .mediaNav > a {
+    margin-left: 20px;
+  }
+
+  .navLink {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex !important;
+  }
+}
+
+/* /////////////profilNav/////////// */
+.profilNav {
+  display: flex;
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 800px;
+  box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 10%);
+  flex-direction: column;
+  padding: 35px;
+  gap: 50px;
+}
+
+.profilNav > a {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.profilNavLink {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.profilNavLink > a {
+  width: auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #000000;
+  text-decoration: none;
+  gap: 15px;
+  padding: 10px;
+}
+
+.profilNavLink > .active {
+  background: #ed165f;
+  color: #fff;
+}
+
+/* /////////////profilNav/////////// */
+
+/* //////////////////////medianav// */
+
+.navCard {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 10%);
+  padding: 40px 10px 300px;
+}
+
+.navCard > a {
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navCard > .active {
+  color: #ed115b;
+}
+
+.logo2 > img {
+  width: 50px;
+}

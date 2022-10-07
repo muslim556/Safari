@@ -1,0 +1,98 @@
+#homeHeader {
+  background: #ed165f;
+  background-image: url(../../Assets/Imgs/bannerLogo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  text-align: center;
+  z-index: 1;
+}
+
+#bannerBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 14px;
+  text-align: center;
+  color: #fff;
+  gap: 20px;
+  margin: 60px auto 40px;
+  transition: all 0.5s ease;
+}
+
+.HomeSec1 {
+  width: 100%;
+  height: auto;
+  display: none;
+  overflow-y: auto;
+  flex-direction: column;
+  padding: 65px 0 130px 0;
+  gap: 60px;
+}
+
+.activ {
+  display: flex;
+}
+
+.rotate {
+  transition: all 0.5s ease-in-out;
+  background: none;
+  border: none;
+}
+
+.rotate.active {
+  transform: rotate(-180deg);
+}
+
+#SeCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#SeCard > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#SeCard > div > h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+.line {
+  width: 15%;
+  height: 2px;
+  background: #000;
+}
+
+#SeCard > p {
+  width: 70%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  color: #000000;
+  margin-top: 30px;
+}
+
+#HomeContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
