@@ -669,10 +669,9 @@ form {
   height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 5% 2%;
-
   gap: 30px 0;
 }
 

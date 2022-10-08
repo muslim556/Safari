@@ -11,26 +11,24 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { DataContext } from "../../Components/Context/DataContext";
 
 export function Cart() {
-  const Data = useContext(DataContext);
+  const { favorite, Cart, setFavorite, setCart } = useContext(DataContext);
 
   const navigate = useNavigate();
 
   const AddFavoriteCart = (item) => {
-    if (Data.favorite.filter((fil) => fil.id === item.id).length === 0) {
-      Data.setFavorite([...Data.favorite, { ...item }]);
+    if (favorite.filter((fil) => fil.id === item.id).length === 0) {
+      setFavorite([...favorite, { ...item }]);
       item.like = true;
     } else {
-      Data.setFavorite((Favorite) =>
-        Data.favorite.filter((fil) => fil.id !== item.id)
-      );
+      setFavorite((Favorite) => favorite.filter((fil) => fil.id !== item.id));
       item.like = false;
     }
   };
 
   const DeleteCart = (i) => {
-    let del = Data.Cart.filter((item, index) => index !== i);
-    Data.setCart(del);
-    console.log(Data.setCart(del));
+    let del = Cart.filter((item, index) => index !== i);
+    setCart(del);
+    console.log(setCart(del));
   };
 
   // const AddCheckout = (item) => {
@@ -39,12 +37,12 @@ export function Cart() {
   // };
 
   const minus = (id) => {
-    Data.setCart(() =>
-      Data.Cart.map((item) =>
+    setCart(() =>
+      Cart.map((item) =>
         item.id === id
           ? {
               ...item,
-              count: item.count--,
+              count: item.count - 1,
             }
           : item
       )
@@ -52,8 +50,8 @@ export function Cart() {
   };
 
   const plus = (id) => {
-    Data.setCart(() =>
-      Data.Cart.map((item) =>
+    setCart(() =>
+      Cart.map((item) =>
         item.id === id
           ? {
               ...item,
@@ -66,7 +64,7 @@ export function Cart() {
 
   return (
     <>
-      {Data.Cart.length === 0 ? (
+      {Cart.length === 0 ? (
         <p id="noproduct">No Product</p>
       ) : (
         <div id="Cart">
@@ -78,7 +76,7 @@ export function Cart() {
                 <td>UNIT PRICE</td>
                 <td>SUB TOTAL</td>
               </tr>
-              {Data.Cart.map((item, index) => {
+              {Cart.map((item, index) => {
                 return (
                   <tr key={index} id="cart_card">
                     <td id="productCard">
@@ -133,7 +131,7 @@ export function Cart() {
                 Total: {""}
                 <span>
                   ₦ {""}
-                  {Data.Cart.reduce((a, b) => a + b.count * b.totalPrice, 0)}$
+                  {Cart.reduce((a, b) => a + b.count * b.totalPrice, 0)}$
                 </span>
               </p>
               <p>Delivery fee not included yet</p>

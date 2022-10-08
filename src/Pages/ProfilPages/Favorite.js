@@ -54,7 +54,7 @@ export function Favorite() {
                   </Button>
                 </div>
               </div>
-            );
+            );  
           })}
         </div>
       )}

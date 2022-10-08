@@ -51,91 +51,12 @@ import { toast } from "react-toastify";
 export const DataContext = createContext();
 
 export function Data() {
-  const [Cart, setCart] = useState([
-    {
-      id: 0,
-      name: "Multicolored armless top",
-      productImg: multicoloredArmlessTop,
-      type: "clothes",
-      category: "tops",
-      color: "gold",
-      size: "L",
-      totalPrice: 1000,
-      subPrice: 0,
-      count: 1,
-      moreSeen: 6,
-      like: false,
-      bestSeling: 5,
-    },
-  ]);
-  const [favorite, setFavorite] = useState([
-    {
-      id: 0,
-      name: "Multicolored armless top",
-      productImg: multicoloredArmlessTop,
-      type: "clothes",
-      category: "tops",
-      color: "gold",
-      size: "L",
-      totalPrice: 1000,
-      subPrice: 0,
-      count: 1,
-      moreSeen: 6,
-      like: false,
-      bestSeling: 5,
-    },
-    {
-      id: 0,
-      name: "Multicolored armless top",
-      productImg: multicoloredArmlessTop,
-      type: "clothes",
-      category: "tops",
-      color: "gold",
-      size: "L",
-      totalPrice: 1000,
-      subPrice: 0,
-      count: 1,
-      moreSeen: 6,
-      like: false,
-      bestSeling: 5,
-    },
-  ]);
+  const [Cart, setCart] = useState([]);
+  const [favorite, setFavorite] = useState([]);
   const [signIn, setSignIn] = useState({});
   const [inspection, setInspection] = useState({});
-  const [DeliveryOrder, setDeliveryOrder] = useState([
-    {
-      id: 0,
-      name: "Multicolored armless top",
-      productImg: multicoloredArmlessTop,
-      type: "clothes",
-      category: "tops",
-      color: "gold",
-      size: "L",
-      totalPrice: 1000,
-      subPrice: 0,
-      count: 1,
-      moreSeen: 6,
-      like: false,
-      bestSeling: 5,
-    },
-  ]);
-  const [Order, setOrder] = useState([
-    {
-      id: 0,
-      name: "Multicolored armless top",
-      productImg: multicoloredArmlessTop,
-      type: "clothes",
-      category: "tops",
-      color: "gold",
-      size: "L",
-      totalPrice: 1000,
-      subPrice: 0,
-      count: 1,
-      moreSeen: 6,
-      like: false,
-      bestSeling: 5,
-    },
-  ]);
+  const [DeliveryOrder, setDeliveryOrder] = useState([]);
+  const [Order, setOrder] = useState([]);
   const [Checkout, setCheckout] = useState([]);
   const [discount, setDiscount] = useState(false);
   const [search, setSearch] = useState("");
