@@ -27,13 +27,10 @@ export function Checkout() {
   } = useContext(DataContext);
 
   const minus = (id) => {
-    setCart(() =>
+    setCart((Cart) =>
       Cart.map((item) =>
         item.id === id
-          ? {
-              ...item,
-              count: item.count > 1 ? item.count-- : 1,
-            }
+          ? { ...item, count: item.count > 1 ? item.count - 1 : 1 }
           : item
       )
     );

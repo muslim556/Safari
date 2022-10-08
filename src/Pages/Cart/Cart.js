@@ -9,6 +9,7 @@ import { Button } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { NavLink, useNavigate } from "react-router-dom";
 import { DataContext } from "../../Components/Context/DataContext";
+import { AlternateEmail } from "@mui/icons-material";
 
 export function Cart() {
   const { favorite, Cart, setFavorite, setCart } = useContext(DataContext);
@@ -37,7 +38,7 @@ export function Cart() {
   // };
 
   const minus = (id) => {
-    setCart((mevalar) =>
+    setCart((Cart) =>
       Cart.map((item) =>
         item.id === id
           ? { ...item, count: item.count > 1 ? item.count - 1 : 1 }
