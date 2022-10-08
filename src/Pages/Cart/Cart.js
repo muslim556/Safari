@@ -9,7 +9,6 @@ import { Button } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { NavLink, useNavigate } from "react-router-dom";
 import { DataContext } from "../../Components/Context/DataContext";
-import { AlternateEmail } from "@mui/icons-material";
 
 export function Cart() {
   const { favorite, Cart, setFavorite, setCart } = useContext(DataContext);
