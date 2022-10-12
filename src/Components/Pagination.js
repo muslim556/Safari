@@ -34,7 +34,7 @@ export function ShowProduct({ Data }) {
           {Data.slice(pagesVisited, pagesVisited + usersPerPage).map(
             (item, index) => {
               return (
-                <div key={index} id="paginateCard">
+                <div key={index} id="paginateCard" data-aos="zoom-in-down">
                   <figure id="Figure">
                     <img src={item.productImg} alt="" />
                     <div className="btn-group">
@@ -55,8 +55,12 @@ export function ShowProduct({ Data }) {
                       </Button>
                     </div>
                   </figure>
-                  <p>{item.name}</p>
-                  <p>₦{item.totalPrice}</p>
+                  <p className="animate__animated animate__rollIn">
+                    {item.name}
+                  </p>
+                  <p className="animate__animated animate__rollIn">
+                    ₦{item.totalPrice}
+                  </p>
                   <div id="added_btns">
                     <label onClick={() => AddFavorite(item)}>
                       <Checkbox

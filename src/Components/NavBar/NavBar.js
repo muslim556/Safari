@@ -10,7 +10,7 @@ import Drawer from "@mui/material/Drawer";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { DataContext } from "./../Context/DataContext";
 import Logo from "../../Assets/Imgs/Logo.svg";
-
+import "animate.css";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import Person2Icon from "@mui/icons-material/Person2";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
@@ -42,13 +42,24 @@ export function NavBar() {
       </IconButton>
 
       <div className="navLink">
-        <NavLink to="/safari">Home</NavLink>
-        <NavLink to="/clothes">Clothes</NavLink>
-        <NavLink to="/shoes">Shoes</NavLink>
-        <NavLink to="/accessories">Accessories</NavLink>
+        <NavLink to="/safari" className="animate__animated animate__zoomIn">
+          Home
+        </NavLink>
+        <NavLink to="/clothes" className="animate__animated animate__zoomIn">
+          Clothes
+        </NavLink>
+        <NavLink to="/shoes" className="animate__animated animate__zoomIn">
+          Shoes
+        </NavLink>
+        <NavLink
+          to="/accessories"
+          className="animate__animated animate__zoomIn"
+        >
+          Accessories
+        </NavLink>
       </div>
 
-      <NavLink to="/safari" className="logo">
+      <NavLink to="/safari" className="animate__animated animate__zoomIn logo">
         <img src={Logo} alt="" />
       </NavLink>
       <div className="navItem">
@@ -102,10 +113,38 @@ export function NavBar() {
             <img src={Logo} alt="" />
           </NavLink>
           <div className="menuLink">
-            <NavLink to="/safari">Home</NavLink>
-            <NavLink to="/clothes">Clothes</NavLink>
-            <NavLink to="/shoes">Shoes</NavLink>
-            <NavLink to="/accessories">Accessories</NavLink>
+            <NavLink
+              to="/safari"
+              onClick={() => {
+                setOpenNav(false);
+              }}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/clothes"
+              onClick={() => {
+                setOpenNav(false);
+              }}
+            >
+              Clothes
+            </NavLink>
+            <NavLink
+              to="/shoes"
+              onClick={() => {
+                setOpenNav(false);
+              }}
+            >
+              Shoes
+            </NavLink>
+            <NavLink
+              to="/accessories"
+              onClick={() => {
+                setOpenNav(false);
+              }}
+            >
+              Accessories
+            </NavLink>
           </div>
         </div>
       </Drawer>

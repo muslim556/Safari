@@ -22,8 +22,9 @@ export function Home() {
             setOpen(!open);
           }}
         >
-          <span>Explore our collection</span>
-
+          <span >
+            Explore our collection
+          </span>
           <button className={open ? "rotate active" : "rotate"}>
             <img src={bannerBtn} alt="" />
           </button>

@@ -4,6 +4,9 @@ import { MainRouter } from "./MainRouter";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Data } from "./Components/Context/DataContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

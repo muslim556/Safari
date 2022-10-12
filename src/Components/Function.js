@@ -132,7 +132,7 @@ export function Category({
           {categoryData.map((item, index) => {
             return (
               <label
-                className="CategoryLabel"
+                className="animate__animated animate__backInLeft CategoryLabel"
                 onClick={() => CategoryFilter(item)}
                 key={index}
               >
@@ -151,7 +151,11 @@ export function Category({
           <div id="choose_size_card">
             {sizeData.map((item, index) => {
               return (
-                <label id="choose_size" key={index}>
+                <label
+                  id="choose_size"
+                  key={index}
+                  className="animate__animated animate__backInLeft"
+                >
                   <input
                     type="radio"
                     name="size"
@@ -172,7 +176,11 @@ export function Category({
           <div id="choose_size_card">
             {colorData.map((item, index) => {
               return (
-                <label id="choose_color" key={index}>
+                <label
+                  id="choose_color"
+                  key={index}
+                  className="animate__animated animate__backInLeft"
+                >
                   <input type="radio" onClick={() => CategoryColor(item)} />
                   <div id="color_card" className={item}></div>
                   <p id="color">{item}</p>
@@ -189,6 +197,7 @@ export function Category({
           <span id="line"></span>
           <div id="choose_price_card">
             <label
+              className="animate__animated animate__backInLeft"
               id="choose_price"
               onClick={() => {
                 PriceFillter(0, 10000);
@@ -198,6 +207,7 @@ export function Category({
               <p id="price">₦0 - ₦10,000</p>
             </label>
             <label
+              className="animate__animated animate__backInLeft"
               id="choose_price"
               onClick={() => {
                 PriceFillter(10000, 20000);
@@ -207,6 +217,7 @@ export function Category({
               <p id="price">₦10,000 - ₦20,000</p>
             </label>
             <label
+              className="animate__animated animate__backInLeft"
               id="choose_price"
               onClick={() => {
                 PriceFillter(20000, 30000);
@@ -216,6 +227,7 @@ export function Category({
               <p id="price">₦20,000 - ₦ 30,000</p>
             </label>
             <label
+              className="animate__animated animate__backInLeft"
               id="choose_price"
               onClick={() => {
                 PriceFillter(30000, 60000);
@@ -225,6 +237,7 @@ export function Category({
               <p id="price">₦30,000 - ₦ 60,000</p>
             </label>
             <label
+              className="animate__animated animate__backInLeft"
               id="choose_price"
               onClick={() => {
                 PriceFillter(60000, 100000);
@@ -274,8 +287,11 @@ export function Category({
             {categoryData.map((item, index) => {
               return (
                 <label
-                  className="CategoryLabel"
-                  onClick={() => CategoryFilter(item)}
+                  className="animate__animated animate__backInLeft CategoryLabel"
+                  onClick={() => {
+                    CategoryFilter(item);
+                    setOpenDrawer(false);
+                  }}
                   key={index}
                 >
                   <input type="radio" name="category" />
@@ -293,12 +309,16 @@ export function Category({
             <div id="choose_size_card">
               {sizeData.map((item, index) => {
                 return (
-                  <label id="choose_size" key={index}>
-                    <input
-                      type="radio"
-                      name="size"
-                      onClick={() => CategorySize(item)}
-                    />
+                  <label
+                    className="animate__animated animate__backInLeft"
+                    id="choose_size"
+                    key={index}
+                    onClick={() => {
+                      CategorySize(item);
+                      setOpenDrawer(false);
+                    }}
+                  >
+                    <input type="radio" name="size" />
                     <p id="size">{item}</p>
                   </label>
                 );
@@ -314,8 +334,16 @@ export function Category({
             <div id="choose_size_card">
               {colorData.map((item, index) => {
                 return (
-                  <label id="choose_color" key={index}>
-                    <input type="radio" onClick={() => CategoryColor(item)} />
+                  <label
+                    id="choose_color"
+                    key={index}
+                    onClick={() => {
+                      CategoryColor(item);
+                      setOpenDrawer(false);
+                    }}
+                    className="animate__animated animate__backInLeft"
+                  >
+                    <input type="radio" />
                     <div id="color_card" className={item}></div>
                     <p id="color">{item}</p>
                   </label>
@@ -335,11 +363,13 @@ export function Category({
                 onClick={() => {
                   PriceFillter(0, 10000);
                 }}
+                className="animate__animated animate__backInLeft"
               >
                 <input type="radio" name="aa" />
                 <p id="price">₦0 - ₦10,000</p>
               </label>
               <label
+                className="animate__animated animate__backInLeft"
                 id="choose_price"
                 onClick={() => {
                   PriceFillter(10000, 20000);
@@ -349,27 +379,33 @@ export function Category({
                 <p id="price">₦10,000 - ₦20,000</p>
               </label>
               <label
+                className="animate__animated animate__backInLeft"
                 id="choose_price"
                 onClick={() => {
                   PriceFillter(20000, 30000);
+                  setOpenDrawer(false);
                 }}
               >
                 <input type="radio" name="aa" />
                 <p id="price">₦20,000 - ₦ 30,000</p>
               </label>
               <label
+                className="animate__animated animate__backInLeft"
                 id="choose_price"
                 onClick={() => {
                   PriceFillter(30000, 60000);
+                  setOpenDrawer(false);
                 }}
               >
                 <input type="radio" name="aa" />
                 <p id="price">₦30,000 - ₦ 60,000</p>
               </label>
               <label
+                className="animate__animated animate__backInLeft"
                 id="choose_price"
                 onClick={() => {
                   PriceFillter(60000, 100000);
+                  setOpenDrawer(false);
                 }}
               >
                 <input type="radio" name="aa" />

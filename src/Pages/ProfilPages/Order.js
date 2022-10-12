@@ -4,25 +4,37 @@ import DoneIcon from "@mui/icons-material/Done";
 import { toast } from "react-toastify";
 
 export function Order() {
-  const Data = useContext(DataContext);
+  const {
+    setOrder,
+    Order,
+    DeliveryOrder,
+    setDeliveryOrder,
+    Cart,
+    discount,
+    setCart,
+  } = useContext(DataContext);
 
   const AddOrder = (item, i) => {
-    Data.setOrder([...Data.Order, { ...item }]);
-    let del = Data.DeliveryOrder.filter((item, index) => index !== i);
-    Data.setDeliveryOrder(del);
+    setOrder([...Order, { ...item }]);
+    let del = DeliveryOrder.filter((item, index) => index !== i);
+    setDeliveryOrder(del);
   };
 
   const [data] = useState(JSON.parse(localStorage.getItem("data")) || []);
 
+  const deleteData = (i) => {
+    let del = Cart.filter((item, index) => index !== i);
+    setCart(del);
+  };
   return (
     <>
       <div id="order">
         <p>My Orders</p>
         <div id="order_card_container">
-          {Data.Order.length === 0 ? (
+          {Order.length === 0 ? (
             <p id="no_order">No order was delivered</p>
           ) : (
-            Data.Order.map((item) => {
+            Order.map((item) => {
               return (
                 <div id="order_card" key={item.id}>
                   <div id="order_card_detail">
@@ -75,10 +87,10 @@ export function Order() {
           </button>
         </div>
         <div id="order_delivery_container">
-          {Data.DeliveryOrder.length === 0 ? (
+          {DeliveryOrder.length === 0 ? (
             <p id="no_order">You ordered nothing</p>
           ) : (
-            Data.DeliveryOrder.map((item, i) => {
+            DeliveryOrder.map((item, i) => {
               return (
                 <div id="order_card" key={item.id}>
                   <div id="order_card_detail">
@@ -114,21 +126,21 @@ export function Order() {
                     <p>Delivery fee - ₦ 2,000 </p>
                     <p
                       style={
-                        Data.discount
+                        discount
                           ? { display: "flex", paddingBottom: "5px" }
                           : { display: "none" }
                       }
                     >
                       Discount - ₦ {""}
-                      {Data.Cart.reduce(
+                      {Cart.reduce(
                         (a, b) => a + ((b.count * b.totalPrice) / 100) * 5,
                         0
                       )}
                     </p>
                     <p>
                       Total - ₦{" "}
-                      {Data.discount
-                        ? Data.Cart.reduce(
+                      {discount
+                        ? Cart.reduce(
                             (a, b) =>
                               a +
                               (b.count * b.totalPrice -
@@ -136,7 +148,7 @@ export function Order() {
                               2000,
                             0
                           )
-                        : Data.Cart.reduce(
+                        : Cart.reduce(
                             (a, b) => a + (b.count * b.totalPrice + 2000),
                             0
                           )}
@@ -166,6 +178,7 @@ export function Order() {
                     }}
                     onClick={() => {
                       AddOrder(item, i);
+                      deleteData(i);
                     }}
                   >
                     <DoneIcon />
