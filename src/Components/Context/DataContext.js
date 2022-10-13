@@ -63,6 +63,7 @@ export function Data() {
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("address")) || []
   );
+
   const [user, setUser] = useState({
     id: "",
     name: "",
