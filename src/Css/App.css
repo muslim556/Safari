@@ -10,15 +10,21 @@
   font-family: Mulish;
 }
 
+button {
+  cursor: pointer;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   width: 100%;
+  min-height: 100vh;
   height: auto;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   background: #ccc;
 }
 
@@ -30,13 +36,10 @@ body {
   align-items: center;
 }
 
-button {
-  cursor: pointer;
-}
-
 #root {
   max-width: 1440px;
   width: 100%;
+  min-height: 100vh;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -66,7 +69,6 @@ button {
   height: 900px;
 }
 
-
-#added_btns{
+#added_btns {
   display: none;
 }

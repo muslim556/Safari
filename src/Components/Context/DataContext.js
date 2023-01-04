@@ -60,9 +60,9 @@ export function Data() {
   const [Checkout, setCheckout] = useState([]);
   const [discount, setDiscount] = useState(false);
   const [search, setSearch] = useState("");
-  const [data, setData] = useState(
-    JSON.parse(localStorage.getItem("address")) || []
-  );
+    const [data, setData] = useState(
+      JSON.parse(localStorage.getItem("address")) || []
+    );
 
   const [user, setUser] = useState({
     id: "",

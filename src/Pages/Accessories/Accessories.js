@@ -52,7 +52,7 @@ export function Accessories() {
       });
       setAccesoriesData(Sort4);
     }
-  }, [sort]); // eslint-disable-line
+  }, [sort, Accesories]);
 
   const CategoryFilter = (category) => {
     if (category === "all") {

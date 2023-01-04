@@ -28,13 +28,7 @@ export function Cart() {
   const DeleteCart = (i) => {
     let del = Cart.filter((item, index) => index !== i);
     setCart(del);
-    console.log(setCart(del));
   };
-
-  // const AddCheckout = (item) => {
-  //   Data.setCheckout([...Data.Checkout, { ...item }]);
-  //   console.log(Data.Checkout);
-  // };
 
   const minus = (id) => {
     setCart((Cart) =>
@@ -62,7 +56,9 @@ export function Cart() {
   return (
     <>
       {Cart.length === 0 ? (
-        <p id="noproduct">No Product</p>
+        <div id="noproduct">
+          <p>No Product</p>
+        </div>
       ) : (
         <div id="Cart">
           <table>

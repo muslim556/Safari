@@ -30,6 +30,8 @@ export function NavBar() {
     }
   };
 
+
+
   return (
     <nav>
       <IconButton

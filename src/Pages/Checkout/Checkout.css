@@ -130,7 +130,7 @@
 }
 
 #delivery_input_radio input[type="radio"] {
-  -webkit-appearance: none;
+  appearance: none;
   background: none;
   margin: 0;
   font: inherit;
